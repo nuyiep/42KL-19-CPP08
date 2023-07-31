@@ -9,10 +9,10 @@ This module is designed to help you understand templated containers, iterators a
 	- a way to organise data
 
 	- E.g.
-	
+
 		- Array - fixed-size sequence of elements, where the size is determined at compile-time
 		- Vector- a dynamic array that can grow and shrink in size automatically as elements are
-					added or removed
+		  added or removed
 		- List: A doubly-linked list that allows efficient insertion and deletion of elements at any position.
 		- Forward List: A singly-linked list similar to the list container, but more memory-efficient.
 		- Deque: A double-ended queue, which is similar to a vector but allows efficient insertion and
