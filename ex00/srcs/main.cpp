@@ -6,24 +6,33 @@
 /*   By: plau <plau@student.42.kl>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/31 13:25:01 by plau              #+#    #+#             */
-/*   Updated: 2023/07/31 16:06:07 by plau             ###   ########.fr       */
+/*   Updated: 2023/07/31 18:52:50 by plau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <map>
-#include <vector>
-#include <list>
+#include "easyfind.hpp"
 
 int main()
 {
-	std::vector<int>values = {1, 2,  3, 4, 5};
-	for (std::vector<int>::size_type i = 0; i < values.size(); i++)
+	int x = 19;
+	std::list<int> list1;
+	list1.push_back(199);
+	list1.push_back(1);
+	list1.push_back(19);
+	std::list<int>::iterator it1;
+	for (it1 = list1.begin(); it1 != list1.end(); ++it1)
 	{
-		std::cout << values[i] << std::endl;
+		std::cout << *it1 << " ";
 	}
-	// for (int value : values)
-	// 	std::cout << value << std::endl;
 	std::cout << std::endl;
+	try
+	{
+		int i = easyfind(list1, x);
+		std::cout << "First occurence of " << x << " is at " << "position " << i << std::endl;
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << '\n';
+	}
 	return (0);
 }

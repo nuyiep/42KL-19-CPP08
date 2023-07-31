@@ -77,4 +77,10 @@ Use c11's for each loop without creating an iterator
 	- acts as a pointer to elements within the container, enabling
 		you to perform various operations on the container's elements
 
-**Algorithms**
+**Associative containers**
+	- std::map - A red-black-tree-based container that 
+				 maintains a sorted sequence of key-value pairs
+			   - each element in the map is uniquely associated 
+			     with its key, and the elements are ordered based on the keys
+	- std::unordered_map - a hash table-based container
+	
