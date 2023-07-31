@@ -36,7 +36,7 @@ This module is designed to help you understand templated containers, iterators a
 
 		int main()
 		{
-			std::list<int>		lst1;
+			std::list<int>	lst1;
 			
 			lst1.push_back(101);
 			lst1.push_back(201);
@@ -53,6 +53,7 @@ This module is designed to help you understand templated containers, iterators a
 
 OR 
 Use c11's for each loop without creating an iterator
+		
 		int main()
 		{
 			std::list<int>		lst1;
