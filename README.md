@@ -78,6 +78,7 @@ Use c11's for each loop without creating an iterator
 		you to perform various operations on the container's elements
 
 **Associative containers**
+
 	- std::map - A red-black-tree-based container that 
 				 maintains a sorted sequence of key-value pairs
 			   - each element in the map is uniquely associated 
