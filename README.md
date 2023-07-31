@@ -12,19 +12,19 @@ This module is designed to help you understand templated containers, iterators a
 
 		- Array - fixed-size sequence of elements, where the size is determined at compile-time
 		- Vector- a dynamic array that can grow and shrink in size automatically as elements are
-		  added or removed
+		  		  added or removed
 		- List: A doubly-linked list that allows efficient insertion and deletion of elements at any position.
 		- Forward List: A singly-linked list similar to the list container, but more memory-efficient.
 		- Deque: A double-ended queue, which is similar to a vector but allows efficient insertion and
-			deletion at both ends.
+			     deletion at both ends.
 		- Set: A sorted set of unique elements, where elements are automatically ordered.
 		- Map: An associative container that stores key-value pairs and maintains a sorted order based on keys.
 		- Unordered Set: Similar to the set container but uses a hash table to provide faster access and 
-						 unordered elements.
+		                unordered elements.
 		- Unordered Map: Similar to the map container but uses a hash table for faster access and unordered
-						 key-value pairs.
+		                 key-value pairs.
 		- Stack: A container that follows the Last-In-First-Out (LIFO) principle, typically used for implementing
-		 		function calls and undo operations.
+                function calls and undo operations.
 		- Queue: A container that follows the First-In-First-Out (FIFO) principle, often used for task scheduling.
 		- Priority Queue: A container that allows efficient access to the element with the highest priority.
 	
