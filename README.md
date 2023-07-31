@@ -3,9 +3,13 @@
 This module is designed to help you understand templated containers, iterators and algorithms in CPP.
 
 **Containers**
+
 	- an object that holds a collection of elements/values
+
 	- a way to organise data
+
 	- E.g.
+	
 		- Array - fixed-size sequence of elements, where the size is determined at compile-time
 		- Vector- a dynamic array that can grow and shrink in size automatically as elements are
 					added or removed
@@ -66,6 +70,7 @@ Use c11's for each loop without creating an iterator
 		}
 
 **Iterators**
+
 	- an object that allows you to traverse and access the elements
 		of a container (like arrays, vectors, list, etc) sequentially
 	- acts as a pointer to elements within the container, enabling
