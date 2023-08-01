@@ -6,11 +6,12 @@
 /*   By: plau <plau@student.42.kl>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/31 13:25:01 by plau              #+#    #+#             */
-/*   Updated: 2023/08/01 17:45:40 by plau             ###   ########.fr       */
+/*   Updated: 2023/08/01 18:28:53 by plau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "easyfind.hpp"
+#include "easyfind.tpp"
 
 /* std::vector constructor takes 2 iterators (begin and end) */
 /* is used to initialize vector1 with the elements from the array */
