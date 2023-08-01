@@ -6,7 +6,7 @@
 /*   By: plau <plau@student.42.kl>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/01 18:20:00 by plau              #+#    #+#             */
-/*   Updated: 2023/08/01 18:21:42 by plau             ###   ########.fr       */
+/*   Updated: 2023/08/01 18:40:55 by plau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define EASYFIND_TPP
 #include "easyfind.hpp"
 
+/* Must use algorithm: find() */
 /* data.end() returns an iterator pointing beyond the last element */
 /* if std::find does not find the target, it returns data.end() */
 /* check if x is found */
