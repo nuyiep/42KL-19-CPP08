@@ -6,7 +6,7 @@
 /*   By: plau <plau@student.42.kl>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/31 13:24:58 by plau              #+#    #+#             */
-/*   Updated: 2023/08/01 18:02:39 by plau             ###   ########.fr       */
+/*   Updated: 2023/08/01 18:13:06 by plau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ class noOccurrenceIsFound : public std::exception
 /* 			- it could be a function or member */
 /*			- T::iterator is a dependent name because it depends on */
 /*			  the template parameter T */
+/* https://stackoverflow.com/questions/1600936/officially-what-is-typename-for */
 template<typename T>
 int easyfind(T data, int x)
 {
