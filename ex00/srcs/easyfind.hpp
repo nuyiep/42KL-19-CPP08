@@ -6,7 +6,7 @@
 /*   By: plau <plau@student.42.kl>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/31 13:24:58 by plau              #+#    #+#             */
-/*   Updated: 2023/08/01 13:54:34 by plau             ###   ########.fr       */
+/*   Updated: 2023/08/01 18:02:39 by plau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@
 #include <map>
 #include <vector>
 #include <list>
-#include <algorithm>
+#include <array>
+#include <algorithm> //find
 #include "color.hpp"
 
 /* Exception class */
@@ -26,17 +27,19 @@ class noOccurrenceIsFound : public std::exception
 	public:
 		const char *what() const throw()
 		{
-			return ("No occurence is found");
+			return (BOLD_RED "No occurence is found" RESET);
 		}
-	
 };
 
-/* Use S/Users/plau/19-CPP07/ex02/srcs/color.hpp/Users/plau/19-CPP07/ex02/srcs/color.hpp/Users/plau/19-CPP07/ex02/srcs/color.hppTL algorithms for searching */
 /* data.end() returns an iterator pointing beyond the last element */
 /* if std::find does not find the target, it returns data.end() */
 /* check if x is found */
 /* std::distance- calculates the distance between 2 iterators */
 /* 				- beginning iterator and found iterator */
+/* [Typename] need because complier doesnt know what T::iterator is */
+/* 			- it could be a function or member */
+/*			- T::iterator is a dependent name because it depends on */
+/*			  the template parameter T */
 template<typename T>
 int easyfind(T data, int x)
 {
@@ -49,9 +52,7 @@ int easyfind(T data, int x)
 		return (pos + 1);
 	}
 	else
-	{
 		throw noOccurrenceIsFound();
-	}
 }
 
 /* Manual search using iterators - Not allowed by subject PDF */
