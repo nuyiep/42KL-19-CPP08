@@ -6,17 +6,18 @@
 #    By: plau <plau@student.42.kl>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/21 15:33:58 by plau              #+#    #+#              #
-#    Updated: 2023/07/31 17:38:17 by plau             ###   ########.fr        #
+#    Updated: 2023/08/01 20:17:54 by plau             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME			= 	find
+NAME			= 	span
 CXX				= 	c++
 RM				= 	rm -rf
 MKDIR			= 	mkdir -p
 CXXFLAGS		= 	-Wall -Wextra -Werror -std=c++98 -pedantic
 # CXXFLAGS		+=  -g3 -fsanitize=address
-SRCS_FILES		= 	main 
+SRCS_FILES		= 	main \
+					Span
 					
 SRCS			= 	$(addprefix $(SRCS_DIR), $(addsuffix .cpp, $(SRCS_FILES)))
 OBJS			= 	$(addprefix $(OBJS_DIR), $(addsuffix .o, $(SRCS_FILES)))
