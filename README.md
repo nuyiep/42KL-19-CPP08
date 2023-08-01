@@ -77,6 +77,10 @@ Use c11's for each loop without creating an iterator
 	- acts as a pointer to elements within the container, enabling
 		you to perform various operations on the container's elements
 
+**STL (Standard template library) algorithm**
+	- E.g. of STL algorithm for searching
+	- std::find, std::find
+
 **Associative containers**
 
 	- std::map - A red-black-tree-based container that 
