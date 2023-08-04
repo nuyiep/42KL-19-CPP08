@@ -1,4 +1,4 @@
-# 42KL-19-CPP08
+# 42KL-20-CPP08
 
 This module is designed to help you understand templated containers, iterators and algorithms in CPP.
 
@@ -102,9 +102,14 @@ Use c11's for each loop without creating an iterator
 				 maintains a sorted sequence of key-value pairs
 			   - each element in the map is uniquely associated 
 			     with its key, and the elements are ordered based on the keys
+<<<<<<< HEAD
 	  4. Multimap
 
 **Sequence container**
 
 	- data will be stored sequentially, not randomly
 	
+=======
+	- std::unordered_map - a hash table-based container
+	
+>>>>>>> 5bd3d97ed69236019b00c63e5ccec78f933126cd
