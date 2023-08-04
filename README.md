@@ -2,6 +2,16 @@
 
 This module is designed to help you understand templated containers, iterators and algorithms in CPP.
 
+**Summary**
+
+	- STL : Standard Template Library
+	- Consists of 3 components
+		a. Container - store data (list, array, vector)
+		b. Iterator- help to traverse and access the elements
+		c. Algorithm
+	- Good explanation
+	  https://www.youtube.com/watch?v=LyGlTmaWEPs&list=PLk6CEY9XxSIA-xo3HRYC3M0Aitzdut7AA&index=2&ab_channel=CppNuts
+
 **Containers**
 
 	- an object that holds a collection of elements/values
@@ -13,6 +23,9 @@ This module is designed to help you understand templated containers, iterators a
 		- Array - fixed-size sequence of elements, where the size is determined at compile-time
 		- Vector- a dynamic array that can grow and shrink in size automatically as elements are
 		  		  added or removed
+				- Linked list + array
+				- Linked List - can grow dynamically
+				  Array - O(1) access time
 		- List: A doubly-linked list that allows efficient insertion and deletion of elements at any position.
 		- Forward List: A singly-linked list similar to the list container, but more memory-efficient.
 		- Deque: A double-ended queue, which is similar to a vector but allows efficient insertion and
@@ -77,15 +90,21 @@ Use c11's for each loop without creating an iterator
 	- acts as a pointer to elements within the container, enabling
 		you to perform various operations on the container's elements
 
-**STL (Standard template library) algorithm**
+**Algorithm**
 	- E.g. of STL algorithm for searching
-	- std::find, std::find
+	- std::find
 
-**Associative containers**
+**Associative containers - 4 types**
 
-	- std::map - A red-black-tree-based container that 
+	  1. Set
+	  2. Multiset
+	  3. Map - A red-black-tree-based container that 
 				 maintains a sorted sequence of key-value pairs
 			   - each element in the map is uniquely associated 
 			     with its key, and the elements are ordered based on the keys
-	- std::unordered_map - a hash table-based container
+	  4. Multimap
+
+**Sequence container**
+
+	- data will be stored sequentially, not randomly
 	
