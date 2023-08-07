@@ -91,8 +91,8 @@ Use c11's for each loop without creating an iterator
 		you to perform various operations on the container's elements
 
 **Algorithm**
-	- E.g. of STL algorithm for searching
-	- std::find
+	
+
 
 **Associative containers - 4 types**
 

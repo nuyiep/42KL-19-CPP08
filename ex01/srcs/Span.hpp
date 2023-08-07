@@ -6,7 +6,7 @@
 /*   By: plau <plau@student.42.kl>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/01 18:34:16 by plau              #+#    #+#             */
-/*   Updated: 2023/08/04 15:03:47 by plau             ###   ########.fr       */
+/*   Updated: 2023/08/07 19:09:58 by plau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 #include <iostream>
 #include "color.hpp"
 #include <vector>
+#include <algorithm>
+#include <numeric>
 
 class Span
 {
@@ -28,12 +30,12 @@ class Span
 		/* Required by PDF */
 		Span(unsigned int maxSize);
 		void	addNumber(int x);
-		void	shortestSpan();
-		void	longestSpan();
+		void	addManyNumbers(std::vector<int>::iterator begin, std::vector<int>::iterator end, int size);
+		int		shortestSpan();
+		int		longestSpan();
 		
 		/* Member functions */
 		void	print_container(std::vector<int> container);
-		
 		/* Exception class */
 		class exceededMaxException : public std::exception
 		{
