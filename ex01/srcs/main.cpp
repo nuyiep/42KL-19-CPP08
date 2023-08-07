@@ -6,7 +6,7 @@
 /*   By: plau <plau@student.42.kl>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/01 18:18:31 by plau              #+#    #+#             */
-/*   Updated: 2023/08/07 19:12:33 by plau             ###   ########.fr       */
+/*   Updated: 2023/08/07 19:17:40 by plau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,11 +60,12 @@ int main()
 	std::cout << "|	Add many numbers using iterator |" << std::endl;
 	std::cout << "|---------------------------------------|" << std::endl;
 	Span tenK = Span(10000);
-	int size = 9999;
+	int size = 9998;
 	std::vector<int> numbersToAdd(size, 88);
 	tenK.addManyNumbers(numbersToAdd.begin(), numbersToAdd.end(), size);
 	tenK.addNumber(77);
-	// tenK.addNumber(66); //will throw exception
+	tenK.addNumber(66);
+	// tenK.addNumber(55); //will throw exception
 	tenK.print_container(tenK.intVector);
 	std::cout << tenK.shortestSpan() << std::endl;
 	std::cout << tenK.longestSpan() << std::endl;
