@@ -106,19 +106,14 @@ Use c11's for each loop without creating an iterator
 
 	- data will be stored sequentially, not randomly
 
-**Stack**
-
-https://stackoverflow.com/questions/525365/does-stdstack-expose-iterators#:~:text=Stack%20does%20not%20have%20iterators,std%3A%3Avector%2C%20etc).
-
-https://en.cppreference.com/w/cpp/container/stack
-
 **#if 0, #endif**
 
-to comment out
-int main()
-{
-	#if 0
-	std::cout << "how are u" << std::endl;
-	#endif
-	return (0);
-}
+	- to comment out codes
+
+	- int main()
+	{
+		#if 0
+		std::cout << "how are u" << std::endl;
+		#endif
+		return (0);
+	}
