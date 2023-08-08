@@ -6,7 +6,7 @@
 /*   By: plau <plau@student.42.kl>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/07 20:35:32 by plau              #+#    #+#             */
-/*   Updated: 2023/08/08 18:36:57 by plau             ###   ########.fr       */
+/*   Updated: 2023/08/08 21:00:16 by plau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,33 @@ int main()
 		mstack.push_back(0);
 		std::list<int>::iterator it = mstack.begin();
 		std::list<int>::iterator ite = mstack.end();
+		
+		++it;
+		--it;
+		while (it != ite)
+		{
+			std::cout << *it << std::endl;
+			++it;
+		}
+	}
+	{
+		std::cout << "|---------------------------------------|" << std::endl;
+		std::cout << "|            Vector test                |" << std::endl;
+		std::cout << "|---------------------------------------|" << std::endl;
+		std::vector<int> mstack;
+		mstack.push_back(5); 
+		mstack.push_back(17);
+		
+		std::cout << mstack.back() << std::endl;
+		mstack.pop_back();
+		std::cout << mstack.size() << std::endl;
+		mstack.push_back(3);
+		mstack.push_back(5);
+		mstack.push_back(737);
+		//[...]
+		mstack.push_back(0);
+		std::vector<int>::iterator it = mstack.begin();
+		std::vector<int>::iterator ite = mstack.end();
 		
 		++it;
 		--it;

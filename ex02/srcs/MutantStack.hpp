@@ -6,7 +6,7 @@
 /*   By: plau <plau@student.42.kl>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/07 20:33:26 by plau              #+#    #+#             */
-/*   Updated: 2023/08/08 20:23:06 by plau             ###   ########.fr       */
+/*   Updated: 2023/08/08 21:03:29 by plau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 #include <iostream>
 #include <stack>
 #include <list>
+#include <vector>
+#include <deque>
 
 template <typename T>
 class MutantStack : public std::stack<T>
@@ -28,9 +30,10 @@ class MutantStack : public std::stack<T>
 		MutantStack &operator=(const MutantStack &src) {(void)src;};
 		
 		typedef typename std::stack<T>::container_type::iterator iterator;
-		
+
 		iterator begin() {return (this->c.begin());};
 		iterator end() {return (this->c.end());};
+
 	private:	
 	
 };
@@ -39,7 +42,8 @@ class MutantStack : public std::stack<T>
 // https://www.youtube.com/watch?v=86Pa973BW4Y&ab_channel=C%2B%2BWeeklyWithJasonTurner
 /* Can add */
 /**
- * different types of iterator
- * 
+ * different types of iterator 
+ * initialize default constructor to inherit explicitly from std::stack
+ * define copy constructor and assignment operator
  */
 #endif
