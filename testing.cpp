@@ -12,15 +12,8 @@ int square(int x)
 
 int main()
 {
-	std::vector<int> input = {1, 2, 3, 4, 5};
-	std::vector<int> output;
-
-	std::transform(input.begin(), input.end(), output.begin(), square);
-	std::vector<int>::iterator it1;
-	for (it1 = output.begin(); it1 != output.end(); ++it1)
-	{
-		std::cout << *it1 << " ";
-	}
-	std::cout << std::endl << std::endl;
+	#if 0
+	std::cout << "how are u" << std::endl;
+	#endif
 	return (0);
 }
