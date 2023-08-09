@@ -6,7 +6,7 @@
 /*   By: plau <plau@student.42.kl>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/31 13:25:01 by plau              #+#    #+#             */
-/*   Updated: 2023/08/09 13:57:06 by plau             ###   ########.fr       */
+/*   Updated: 2023/08/09 18:20:19 by plau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@ int main()
 	
 	std::cout << BOLD_MAGENTA << "*** List ***" << RESET << std::endl;
 	std::list<int> list1;
-	list1.push_back(199);
-	list1.push_back(11);
-	list1.push_back(19);
+	// list1.push_back(199);
+	// list1.push_back(11);
+	// list1.push_back(19);
 	
 	std::list<int>::iterator it1;
 	std::cout << "List: ";
@@ -46,7 +46,7 @@ int main()
 	{
 		std::cerr << e.what() << '\n';
 	}
-
+	#if 0
 	/* Vector */
 	std::cout << BOLD_MAGENTA << "*** Vector ***" << RESET << std::endl;
 	int arrayOne[4] = {55, 66, 99, 33};
@@ -94,5 +94,6 @@ int main()
 	{
 		std::cerr << e.what() << '\n';
 	}
+	#endif
 	return (0);
 }

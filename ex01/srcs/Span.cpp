@@ -6,7 +6,7 @@
 /*   By: plau <plau@student.42.kl>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/01 18:32:01 by plau              #+#    #+#             */
-/*   Updated: 2023/08/09 14:28:31 by plau             ###   ########.fr       */
+/*   Updated: 2023/08/09 18:57:36 by plau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ Span::~Span()
 
 Span::Span(const Span &src)
 {
+	// src._capacity;
 	(*this) = src;
 }
 
@@ -74,11 +75,21 @@ void	Span::print_container(std::vector<int>container)
 	std::cout << std::endl;
 }
 
-int getAdjacentDistance(int first, int second)
+void	Span::print_container(std::vector<long>container)
 {
-	int max = std::max(first, second);
-	int min = std::min(first, second);
-	int results = std::abs(max - min);
+	std::vector<long>::iterator it1;
+	for (it1 = container.begin(); it1 != container.end(); ++it1)
+	{
+		std::cout << *it1 << " ";
+	}
+	std::cout << std::endl;
+}
+
+long getAdjacentDistance(long first, long second)
+{
+	long max = std::max(first, second);
+	long min = std::min(first, second);
+	long results = std::abs(max - min);
 	return (results);
 }
 
@@ -99,7 +110,7 @@ int getAdjacentDistance(int first, int second)
 			4 - 5 = -1
 		}
 */
-int	Span::shortestSpan(void)
+long	Span::shortestSpan(void)
 {
 	try
 	{
@@ -111,9 +122,9 @@ int	Span::shortestSpan(void)
 		std::cerr << e.what() << '\n' << '\n';
 		exit(EXIT_FAILURE);
 	}
-	std::vector<int> afterSort;
-	std::vector<int> containDistance(this->_size - 1);
-	int min = -1;
+	std::vector<long> afterSort;
+	std::vector<long> containDistance(this->_size - 1);
+	long min = -1;
 	std::copy(this->intVector.begin(), this->intVector.end(), std::back_inserter(afterSort));
 	std::sort(afterSort.begin(), afterSort.end());
 	std::transform(afterSort.begin(), afterSort.end() - 1, afterSort.begin() + 1, containDistance.begin(), getAdjacentDistance);
@@ -121,7 +132,7 @@ int	Span::shortestSpan(void)
 	return (min);	
 }
 
-int	Span::longestSpan(void)
+long Span::longestSpan(void)
 {
 	try
 	{
@@ -133,9 +144,9 @@ int	Span::longestSpan(void)
 		std::cerr << e.what() << '\n' << '\n';
 		exit(EXIT_FAILURE);
 	}
-	std::vector<int> afterSort;
-	std::vector<int> containDistance(this->_size - 1);
-	int max = -2;
+	std::vector<long> afterSort;
+	std::vector<long> containDistance(this->_size - 1);
+	long max = 0;
 	std::copy(this->intVector.begin(), this->intVector.end(), std::back_inserter(afterSort));
 	std::sort(afterSort.begin(), afterSort.end());
 	std::transform(afterSort.begin(), afterSort.end() - 1, afterSort.begin() + 1, containDistance.begin(), getAdjacentDistance);
@@ -144,8 +155,15 @@ int	Span::longestSpan(void)
 	std::cout << "Printing distance-vec" << std::endl;
 	print_container(containDistance);
 	std::cout << RESET;
-	max = std::accumulate(containDistance.begin(), containDistance.end(), 0);
-	return (max);	
+	
+	std::vector<long>::iterator it3;
+	for (it3 = containDistance.begin(); it3 != containDistance.end(); ++it3)
+	{
+		max = *it3 + max;
+		std::cout << *it3 << std::endl;
+	}
+	// max = std::accumulate(containDistance.begin(), containDistance.end(), 0); - return value is int
+	return (std::abs(max));	
 }
 
 void	Span::addManyNumbers(std::vector<int>::iterator begin, std::vector<int>::iterator end, int size)

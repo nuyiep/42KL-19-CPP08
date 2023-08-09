@@ -6,7 +6,7 @@
 /*   By: plau <plau@student.42.kl>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/01 18:34:16 by plau              #+#    #+#             */
-/*   Updated: 2023/08/09 14:02:16 by plau             ###   ########.fr       */
+/*   Updated: 2023/08/09 18:42:19 by plau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,12 @@ class Span
 		Span(unsigned int capacity);
 		void	addNumber(int x);
 		void	addManyNumbers(std::vector<int>::iterator begin, std::vector<int>::iterator end, int size);
-		int		shortestSpan();
-		int		longestSpan();
+		long		shortestSpan();
+		long		longestSpan();
 		
 		/* Member functions */
 		void	print_container(std::vector<int> container);
+		void	print_container(std::vector<long> container);
 		/* Exception class */
 		class exceededMaxException : public std::exception
 		{
