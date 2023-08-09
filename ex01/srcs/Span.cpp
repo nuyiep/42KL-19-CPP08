@@ -6,7 +6,7 @@
 /*   By: plau <plau@student.42.kl>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/01 18:32:01 by plau              #+#    #+#             */
-/*   Updated: 2023/08/07 19:11:29 by plau             ###   ########.fr       */
+/*   Updated: 2023/08/09 14:28:31 by plau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,9 @@ Span &Span::operator=(const Span &src)
 	return (*this); 
 }
 
-Span::Span(unsigned int maxSize) : intVector(std::vector<int>()), _capacity(0), _size(0)
+Span::Span(unsigned int capacity) : intVector(std::vector<int>()), _capacity(0), _size(0)
 {
-	this->_capacity = maxSize;	
+	this->_capacity = capacity;	
 }
 
 /* Provides the definition of what() */
@@ -89,6 +89,15 @@ int getAdjacentDistance(int first, int second)
 		- no need to resize and insert elements 
 	getDistance
 		- use getDistance function for each transformation step
+	std::transform
+		storage = 1, 3, 6, 7, 10
+		after_sort = 1, 3, 6, 7, 10
+		containDistance =  
+
+		compare from 2
+		for (auto it = copy.begin(); it != copy.end() - 1; it++) {
+			4 - 5 = -1
+		}
 */
 int	Span::shortestSpan(void)
 {
@@ -109,7 +118,6 @@ int	Span::shortestSpan(void)
 	std::sort(afterSort.begin(), afterSort.end());
 	std::transform(afterSort.begin(), afterSort.end() - 1, afterSort.begin() + 1, containDistance.begin(), getAdjacentDistance);
 	min = *std::min_element(containDistance.begin(), containDistance.end());
-	
 	return (min);	
 }
 

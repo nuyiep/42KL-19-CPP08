@@ -6,7 +6,7 @@
 /*   By: plau <plau@student.42.kl>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/07 20:35:32 by plau              #+#    #+#             */
-/*   Updated: 2023/08/08 21:00:16 by plau             ###   ########.fr       */
+/*   Updated: 2023/08/08 21:21:06 by plau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,7 @@ int main()
 			std::cout << *it << std::endl;
 			++it;
 		}
+		std::stack<int, std::list<int> > s(mstack); 
 	}
 	{
 		std::cout << "|---------------------------------------|" << std::endl;
@@ -94,6 +95,37 @@ int main()
 			std::cout << *it << std::endl;
 			++it;
 		}
+		std::stack<int, std::vector<int> > s(mstack);
 	}
+	#if 0
+	{
+		std::cout << "|---------------------------------------|" << std::endl;
+		std::cout << "|            Deque (deck) test          |" << std::endl;
+		std::cout << "|---------------------------------------|" << std::endl;
+		std::deque<int> mstack;
+		mstack.push_back(5); 
+		mstack.push_back(17);
+		
+		std::cout << mstack.back() << std::endl;
+		mstack.pop_back();
+		std::cout << mstack.size() << std::endl;
+		mstack.push_back(3);
+		mstack.push_back(5);
+		mstack.push_back(737);
+		//[...]
+		mstack.push_back(0);
+		std::deque<int>::iterator it = mstack.begin();
+		std::deque<int>::iterator ite = mstack.end();
+		
+		++it;
+		--it;
+		while (it != ite)
+		{
+			std::cout << *it << std::endl;
+			++it;
+		}
+		std::stack<int, std::deque<int> > s(mstack);
+	}
+	#endif
 	return 0;
 }

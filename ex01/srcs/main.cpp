@@ -6,7 +6,7 @@
 /*   By: plau <plau@student.42.kl>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/01 18:18:31 by plau              #+#    #+#             */
-/*   Updated: 2023/08/07 19:17:40 by plau             ###   ########.fr       */
+/*   Updated: 2023/08/09 14:34:23 by plau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int main()
 	sp.print_container(sp.intVector);
 	std::cout << sp.shortestSpan() << std::endl; 
 	std::cout << sp.longestSpan() << std::endl;
-
+	
 	std::cout << "|---------------------------------------|" << std::endl;
 	std::cout << "|            Int tests                  |" << std::endl;
 	std::cout << "|---------------------------------------|" << std::endl;

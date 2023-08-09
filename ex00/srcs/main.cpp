@@ -6,7 +6,7 @@
 /*   By: plau <plau@student.42.kl>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/31 13:25:01 by plau              #+#    #+#             */
-/*   Updated: 2023/08/01 18:28:53 by plau             ###   ########.fr       */
+/*   Updated: 2023/08/09 13:57:06 by plau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,6 @@ int main()
 	int x = 11;
 	int i = 0;
 	
-	std::cout << BOLD_MAGENTA << "*** Containers ***" << RESET << std::endl;
-	/* List */
 	std::cout << BOLD_MAGENTA << "*** List ***" << RESET << std::endl;
 	std::list<int> list1;
 	list1.push_back(199);
@@ -75,13 +73,8 @@ int main()
 	}
 	
 	/* Array */
-	/* Array won't work because int* is a pointer type */
-	/* and it doesnt have a member type called iterator */
-	/* Need to use a container type that has an iterator */
 	std::cout << std::endl << BOLD_MAGENTA << "***** Array *****" << RESET << std::endl;
 	int			toFind = 1000;
-	// int			array1[4] = {5, 6, 9, 3};
-	//const int	array2[5] = {42, 5, 16, 2022, -99};
 	const size_t size = 4;
 	std::array<int, size>arrayTwo = {5, 6, 9, 3};
 	std::cout << "Array: ";
